@@ -14,9 +14,10 @@
 <header class="box-header">
 <h1>Jung Saet<font color="white"> Byul</font></h1>
 
-<div class="main-div">
-  <div id="login_div">
+<div class="-ms-flexbox">
+  
     <h3>Panel</h3>
+    <div id="login-div" class="main-div">
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" name="Email" placeholder="Email" id="email_field" />
     <label for="inputPassword" class="sr-only">Password</label>
@@ -24,8 +25,8 @@
 
     <button onclick="login()">Login</button>
   </div>
-<div class="loggedin-div">
-  <div id="user_div">
+
+  <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
     <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
     <button onclick="logout()">Logout</button>
