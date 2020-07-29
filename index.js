@@ -1,17 +1,3 @@
- // Your web app's Firebase configuration
-
-  var config = {
-  
-    apiKey: "AIzaSyCjwbKUvDopzXFnl8KhYeYHj0YGhrSHUjI",
-    authDomain: "mydatabase-c1f53.firebaseapp.com",
-    databaseURL: "https://mydatabase-c1f53.firebaseio.com",
-    projectId: "mydatabase-c1f53",
-    storageBucket: "mydatabase-c1f53.appspot.com",
-    messagingSenderId: "925452085527",
-
-    };
-    firebase.initializeApp(config);
-
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -33,8 +19,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
-
-    alert("No Active User");
 
   }
 });
@@ -58,5 +42,4 @@ function login(){
 
 function logout(){
   firebase.auth().signOut();
-  alert("Im so sad you leave ..");
 }
