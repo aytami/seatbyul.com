@@ -1,0 +1,47 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Jung Saet byul - Member Login</title>
+<link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/blackicon/54/bootstrap_icon-512.png">
+<link rel="stylesheet" href="https://aytami.github.io/seatbyul.com/style.css" />
+
+</head>
+
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCjwbKUvDopzXFnl8KhYeYHj0YGhrSHUjI",
+      authDomain: "mydatabase-c1f53.firebaseapp.com",
+      databaseURL: "https://mydatabase-c1f53.firebaseio.com",
+      projectId: "mydatabase-c1f53",
+      storageBucket: "mydatabase-c1f53.appspot.com",
+      messagingSenderId: "925452085527"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://aytami.github.io/seatbyul.com/index.js"></script>
+
+</body>
+</html>
