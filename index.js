@@ -24,6 +24,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       var email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 
+      alert("Active User" + email);
+
     }
 
   } else {
@@ -31,6 +33,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
+
+    alert("No Active User");
 
   }
 });
@@ -54,4 +58,5 @@ function login(){
 
 function logout(){
   firebase.auth().signOut();
+  alert("Im so sad you leave ..");
 }
