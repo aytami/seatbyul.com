@@ -1,3 +1,15 @@
+// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCjwbKUvDopzXFnl8KhYeYHj0YGhrSHUjI",
+      authDomain: "mydatabase-c1f53.firebaseapp.com",
+      databaseURL: "https://mydatabase-c1f53.firebaseio.com",
+      projectId: "mydatabase-c1f53",
+      storageBucket: "mydatabase-c1f53.appspot.com",
+      messagingSenderId: "925452085527"
+     };
+    firebase.initializeApp(config);
+  
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
