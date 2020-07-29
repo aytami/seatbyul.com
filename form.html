@@ -1,0 +1,197 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jung Saet byul - Test Login</title>
+	<link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/blackicon/54/bootstrap_icon-512.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://unlimited.sync-cloud.com/firebase/form.js"></script>
+
+
+<style>
+.ssc {
+            font-family: 'Saira Semi Condensed', sans-serif;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            color: #fff;
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+            background-size: 300% 300%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+        }
+
+.form-signin{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: none;
+  text-align: center;
+}
+.form-signin h1{
+  color: #ffcbe0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.form-signin .checkbox {
+            font-weight: 400;
+        }
+.form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+}
+.form-signin input[type = "email"],.form-signin input[type = "text"],.form-signin input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.form-signin input[type = "email"]:focus,form-signin input[type = "text"]:focus,.form-signin input[type = "password"]:focus{
+  width: 280px;
+  border-color: #add8e6;
+}
+.form-signin input[type = "submit"]{
+  border:0;
+  background: #2ecc71;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.form-signin input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+@-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+</style>
+</head>
+
+
+
+<body class="text-center ssc">
+<div class="py-2">
+<form class="form-signin" action="#">
+<center>
+<br>
+  <h1>Jung Saet<font color="white"> Byul</font></h1>
+  
+<label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" class="form-control mb-2" name="email" placeholder="Email" id="email" required autofocus>
+    
+  <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" class="form-control mb-2" name="password" placeholder="Password" id="password" required>
+						
+<input type="submit" onClick="signIn()" id="signin" value="LOGIN" />
+
+<div id="login_div" class="main-div">
+    <h3>Firebase Web login</h3>
+    <input type="email" placeholder="Email..." id="email" />
+    <input type="password" placeholder="Password..." id="password" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome Back User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+
+
+
+
+</form>
+</br></br></br>
+
+
+
+
+    <!-- footer -->
+        <!-- ============================================================== -->
+ 
+        <footer class="footer">
+             <div class="font-weight-normal">Copyright 2020 | Theme By<font color="black"> A R A</font></div>
+      
+             </footer>
+        
+ 
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+        
+<script>
+
+</script>
+
+</html>
