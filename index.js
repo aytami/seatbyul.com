@@ -17,14 +17,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
 
+    alert("Active User + email_id);
+
     var user = firebase.auth().currentUser;
 
     if(user != null){
 
       var email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
-      alert("Active User" + email);
 
     }
 
