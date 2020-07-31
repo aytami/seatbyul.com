@@ -1,24 +1,29 @@
+<!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Jung Saet byul - Member Login</title>
+<title>Jung Saet byul - VPS Server MY</title>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+  <script src="verify.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
+  <script src="index.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/blackicon/54/bootstrap_icon-512.png">
-<link rel="stylesheet" href="https://aytami.github.io/seatbyul.com/style.css" />
-<link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
-    <style>
-        .ssc {
-            font-family: 'Saira Semi Condensed', sans-serif;       
-}
-      }
-      </style>
-
-</head>
+<link rel="stylesheet" href="https://aytami.github.io/seatbyul.com/script/vendor/style.css" />
+<link rel="stylesheet" href="container.css" />
 
 
-<body class="text-center ssc">
+
+<body>
   <div id="login_div" class="main-div">
     <h3><font color="black">Jung Saet</font> Byul</h3>
     <label for="inputEmail" class="sr-only">Email address</label>
@@ -27,35 +32,32 @@
     <input type="password" name="Password" placeholder="Password..." id="password_field" />
 
   <!--ALERT -->
-                                <a href="https://aytami.github.io/seatbyul.com/usertable.html" target=""><button type="submit" class="btn btn-success">Create Premium VPN SSH</button></a><br>
+    <a href="#" target="/saetbyul.com"><button type="submit" class="btn btn-success" onclick="login()">Create Premium VPN</button></a><br>
                                 <!--ALERT -->
 
-    <button onclick="login()">Login</button>
-  </div>
+   
 
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
     <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
     <button onclick="logout()">Logout</button>
-      
-  
+</body>
+<body class="container">
+<body onload="tableData.Start()">
+  <h1 id="title">Client Panel VPN</h1>
+  <!-- Table structure here -->
+  <table id="our-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>First</th>
+        <th>Last</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
 
-
-
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCjwbKUvDopzXFnl8KhYeYHj0YGhrSHUjI",
-      authDomain: "mydatabase-c1f53.firebaseapp.com",
-      databaseURL: "https://mydatabase-c1f53.firebaseio.com",
-      projectId: "mydatabase-c1f53",
-      storageBucket: "mydatabase-c1f53.appspot.com",
-      messagingSenderId: "925452085527"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="https://aytami.github.io/seatbyul.com/index.js"></script>
-
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
